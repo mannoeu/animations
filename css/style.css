@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Geo:400,400i|Playfair+Display:400,400i,700,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+::selection {
+  color: rgb(246, 219, 38);
+  background: rgb(105, 25, 143);
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  color: #fff;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p,
+a,
+button {
+  font-family: "Geo", sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+}
+
+/**/
+
+.container {
+  width: 100%;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .text,
+.container ul {
+  padding: 0 50px;
+}
+.container .text {
+  width: 60%;
+}
+.container ul {
+  width: 40%;
+}
+.container .text h3 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  line-height: 1em;
+  letter-spacing: 2px;
+
+  font-weight: 900;
+}
+.container .text h3 span {
+  font-weight: 400;
+}
+.container .text p {
+  font-size: 1em;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+.container .text a {
+  padding: 7px 25px;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.2s linear;
+}
+.container .text a:hover {
+  color: #000;
+  background: #fff;
+}
+
+/**/
+.container ul {
+  display: flex;
+  flex-direction: column;
+}
+.container ul li a {
+  display: block;
+  color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: 0.15s ease-out;
+}
+.container ul li a:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 15px;
+    flex-direction: column;
+  }
+  .container .text,
+  .container ul {
+    padding: 0px;
+    margin-bottom: 50px;
+  }
+  .container .text h3 {
+    font-size: 2.5em;
+  }
+  .container ul {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 90%;
+  }
+  .container ul li a {
+    margin-bottom: 0px;
+  }
+}

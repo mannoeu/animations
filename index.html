@@ -3,25 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Navigation</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="head">
-        <div class="eyes">
-          <div class="eyeL"></div>
-          <div class="eyeR"></div>
-        </div>
-        <div class="mouth"></div>
+      <div class="text">
+        <h3>My animations <span>studies</span></h3>
+        <p>
+          This website was developed to group the results of the animations
+          studies. Each index beside represents a developed animation. Welcome
+          and feel comfortable.
+        </p>
+        <a
+          href="https://github.com/mannoeu/animations"
+          target="_blank"
+          rel="noopener noreferrer external"
+          >repository</a
+        >
       </div>
+      <ul>
+        <li><a href="./Emoji/index.html">Emoji</a></li>
+        <li><a href="./Airplane/index.html">Airplane</a></li>
+      </ul>
     </div>
-    <script src="./vanillatilt.js"></script>
-    <script type="text/javascript">
-      VanillaTilt.init(document.querySelector(".head"), {
-        max: 25,
-        speed: 400,
-      });
-    </script>
   </body>
 </html>

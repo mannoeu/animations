@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  font-family: "Righteous", cursive;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  perspective: 150px;
+  position: relative;
+  z-index: 100;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.container h1 {
+  font-size: 8em;
+  display: inline;
+  background: url(../assets/mapa.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.05em;
+  transform-style: preserve-3d;
+  transform: translateZ(-20px) rotateX(10deg);
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+}
+.ball {
+  position: absolute;
+  top: 38%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  transform-origin: center;
+  animation: airplane 6s infinite linear;
+  transform-style: preserve-3d;
+  transform: translateZ(-20px) rotateX(10deg);
+}
+
+.ball img {
+  width: 30px;
+  transform-style: preserve-3d;
+  transform: translateZ(10px) rotateX(10deg);
+}
+
+@keyframes airplane {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.nuvem {
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation: cloudMove 30s infinite ease-in-out;
+  transform-style: preserve-3d;
+}
+
+@keyframes cloudMove {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.nuvem img {
+  position: absolute;
+  transform-style: preserve-3d;
+  z-index: -2;
+  transform: scale(1);
+  animation: cloud 2200ms infinite linear;
+}
+
+.nuvem img:nth-child(1) {
+  width: 140px;
+  transform: rotateX(10deg);
+  animation-delay: 500ms;
+  top: 50%;
+  right: 20%;
+}
+.nuvem img:nth-child(2) {
+  width: 100px;
+  transform: rotateY(180deg);
+  animation-delay: 1000ms;
+  top: 20%;
+  left: 20%;
+}
+.nuvem img:nth-child(3) {
+  width: 60px;
+  transform: rotateX(10deg);
+  animation-delay: 2100ms;
+  top: 15%;
+}
+.nuvem img:nth-child(4) {
+  width: 150px;
+  transform: rotateX(10deg);
+  animation-delay: 1500ms;
+  top: 55%;
+  left: 20%;
+  transform: rotateY(180deg);
+}
+.nuvem img:nth-child(5) {
+  width: 50px;
+  transform: rotateX(10deg);
+  animation-delay: 800ms;
+  top: 80%;
+  right: 65%;
+}
+
+@keyframes cloud {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 991px) {
+  .container h1 {
+    font-size: 5em;
+  }
+  .ball {
+    top: 43%;
+    width: 90px;
+    height: 90px;
+  }
+  .ball img {
+    width: 25px;
+  }
+  .nuvem img:nth-child(1) {
+    width: 60px;
+    top: 5%;
+    right: 20%;
+  }
+  .nuvem img:nth-child(2) {
+    width: 40px;
+    top: 10%;
+    left: 20%;
+  }
+  .nuvem img:nth-child(3) {
+    width: 200px;
+    top: 20%;
+  }
+  .nuvem img:nth-child(4) {
+    width: 99px;
+    top: 55%;
+    left: 15%;
+    transform: rotateY(180deg);
+  }
+  .nuvem img:nth-child(5) {
+    width: 50px;
+    transform: rotateX(10deg);
+    animation-delay: var(--i);
+    top: 70%;
+    right: 25%;
+  }
+}

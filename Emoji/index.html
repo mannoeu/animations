@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <div class="eyes">
+          <div class="eyeL"></div>
+          <div class="eyeR"></div>
+        </div>
+        <div class="mouth"></div>
+      </div>
+    </div>
+    <script src="./vanillatilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector(".head"), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
+  </body>
+</html>
