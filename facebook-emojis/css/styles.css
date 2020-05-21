@@ -1,0 +1,909 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*  ############  */
+/** estilos gerais **/
+.emojis {
+  width: 90%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.emoji {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/*  ############  */
+/** like **/
+.emoji .like {
+  width: 100%;
+  height: 100%;
+  background: #3498db;
+  border-radius: 50%;
+}
+.like i {
+  position: absolute;
+  font-size: 30px;
+  color: #fff;
+  top: 25%;
+  left: 25%;
+}
+.like:hover i {
+  animation: like 4s linear infinite;
+}
+
+@keyframes like {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  10% {
+    transform: translateY(10px) rotate(10deg);
+  }
+  20% {
+    transform: translateY(10px) rotate(10deg);
+  }
+  40% {
+    transform: translateY(-10px) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-10deg);
+  }
+  60% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/*  ############  */
+/** love **/
+.emoji .love {
+  width: 100%;
+  height: 100%;
+  background: #e74c3c;
+  border-radius: 50%;
+}
+.love i {
+  position: absolute;
+  font-size: 30px;
+  color: #fff;
+  top: 32%;
+  left: 28%;
+}
+
+@keyframes love {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.love:hover i {
+  animation: love 2s linear infinite;
+}
+
+/*  ############  */
+/** haha **/
+.emoji .haha {
+  width: 100%;
+  height: 100%;
+  background: #fbc531;
+  border-radius: 50%;
+  position: relative;
+}
+.haha .eyes {
+  position: absolute;
+  width: 70%;
+  height: 20px;
+  top: 20px;
+  left: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.haha .eyes i {
+  color: #18191d;
+}
+
+@keyframes eyes {
+  0% {
+    width: 70%;
+    top: 20px;
+    left: 10px;
+  }
+  30% {
+    top: 22px;
+    width: 80%;
+    left: 6px;
+  }
+  50% {
+    width: 70%;
+    top: 18px;
+    left: 10px;
+  }
+  60% {
+    top: 22px;
+    width: 80%;
+    left: 6px;
+  }
+  70% {
+    width: 70%;
+    top: 20px;
+    left: 10px;
+  }
+}
+
+.haha .mouth {
+  position: absolute;
+  width: 50%;
+  height: 20px;
+  background: #18191d;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 10%;
+  border-top-left-radius: 10%;
+  bottom: 10px;
+  left: 17px;
+  overflow: hidden;
+}
+.haha .mouth .tongue {
+  position: absolute;
+  background: #e74c3c;
+  width: 100%;
+  height: 20px;
+  border-radius: 20px;
+  top: 10px;
+  left: 0;
+}
+
+@keyframes mouth {
+  0% {
+    width: 50%;
+    height: 20px;
+    left: 17px;
+    bottom: 10px;
+  }
+  20% {
+    bottom: 10px;
+    width: 60%;
+    left: 14px;
+    height: 22px;
+  }
+  30% {
+    width: 50%;
+    height: 14px;
+    left: 17px;
+    bottom: 15px;
+  }
+  40% {
+    bottom: 10px;
+    width: 60%;
+    left: 14px;
+    height: 22px;
+  }
+  50% {
+    bottom: 10px;
+    width: 50%;
+    height: 20px;
+    left: 17px;
+  }
+  60% {
+    bottom: 10px;
+    width: 60%;
+    left: 14px;
+    height: 22px;
+  }
+  70% {
+    bottom: 10px;
+    width: 50%;
+    height: 20px;
+    left: 17px;
+  }
+}
+
+.haha:hover .eyes {
+  animation: eyes 3s linear infinite;
+}
+.haha:hover .mouth {
+  animation: mouth 3s linear infinite;
+}
+
+/*  ############  */
+/** yay **/
+.emoji .yay {
+  width: 100%;
+  height: 100%;
+  background: #fbc531;
+  border-radius: 50%;
+}
+@keyframes yay {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  30% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  85% {
+    transform: rotate(-20deg);
+  }
+}
+.yay:hover {
+  animation: yay 1.5s linear infinite;
+}
+.yay .eyes {
+  position: absolute;
+  width: 70%;
+  height: 20px;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.yay .eyes .eyeR,
+.yay .eyes .eyeL {
+  width: 15px;
+  height: 15px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top: 2px solid #18191d;
+}
+.yay .eyes .eyeR::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 10px;
+  right: 0px;
+  border-radius: 50%;
+  background: rgba(240, 75, 60, 0.3);
+  box-shadow: 0 0 5px rgba(240, 75, 60, 0.6);
+}
+.yay .eyes .eyeL::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 10px;
+  left: 0px;
+  border-radius: 50%;
+  background: rgba(240, 75, 60, 0.3);
+  box-shadow: 0 0 5px rgba(240, 75, 60, 0.6);
+}
+.yay .mouth {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom: 2px solid #18191d;
+  left: 20px;
+  bottom: 30px;
+}
+
+/*  ############  */
+/** uau **/
+.emoji .wow {
+  width: 100%;
+  height: 100%;
+  background: #fbc531;
+  border-radius: 50%;
+  position: relative;
+}
+.wow .eyes {
+  position: absolute;
+  width: 70%;
+  height: 20px;
+  top: 15px;
+  left: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+@keyframes moveEyes {
+  0% {
+    left: 10px;
+    transform: rotate(0deg);
+  }
+  10% {
+    left: 5px;
+    transform: rotate(10deg);
+  }
+  20% {
+    left: 5px;
+    transform: rotate(10deg);
+  }
+  30% {
+    left: 15px;
+    transform: rotate(-10deg);
+  }
+  40% {
+    left: 15px;
+    transform: rotate(-10deg);
+  }
+  50% {
+    left: 10px;
+    transform: rotate(0deg);
+  }
+}
+
+.wow .eyes .eyeL,
+.wow .eyes .eyeR {
+  width: 10px;
+  height: 10px;
+  background: #18191d;
+  border-radius: 50%;
+  position: relative;
+}
+@keyframes blinking {
+  0% {
+    height: 10px;
+  }
+  3% {
+    height: 2px;
+  }
+  8% {
+    height: 2px;
+  }
+  12% {
+    height: 10px;
+  }
+  40% {
+    height: 10px;
+  }
+  43% {
+    height: 2px;
+  }
+  45% {
+    height: 2px;
+  }
+  50% {
+    height: 10px;
+  }
+}
+
+.wow .eyes .eyeL::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  top: -8px;
+  left: -1px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top: 2px solid #18191d;
+}
+.wow .eyes .eyeR::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  top: -8px;
+  right: -1px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top: 2px solid #18191d;
+}
+@keyframes eyebrow {
+  0% {
+    top: -8px;
+  }
+  5% {
+    top: -12px;
+  }
+  60% {
+    top: -12px;
+  }
+  65% {
+    top: -8px;
+  }
+}
+
+.wow .mouth {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background: #18191d;
+  border-radius: 50%;
+  bottom: 8px;
+  left: 25px;
+}
+
+@keyframes moveMouth {
+  0% {
+    left: 25px;
+    transform: rotate(0deg);
+  }
+  10% {
+    left: 10px;
+    transform: rotate(10deg) scale(0.6);
+    width: 30px;
+    height: 30px;
+  }
+  20% {
+    left: 10px;
+    transform: rotate(10deg) scale(0.6);
+    width: 30px;
+    height: 30px;
+  }
+  30% {
+    left: 35px;
+    transform: rotate(-10deg) scale(0.6);
+    width: 30px;
+    height: 30px;
+  }
+  40% {
+    left: 35px;
+    transform: rotate(-10deg) scale(1);
+    width: 20px;
+    height: 30px;
+  }
+  50% {
+    left: 25px;
+    transform: rotate(0deg);
+  }
+}
+
+.wow:hover .eyes {
+  animation: moveEyes 4s linear infinite;
+}
+.wow:hover .eyes .eyeR,
+.wow:hover .eyes .eyeL {
+  animation: blinking 4s linear infinite;
+}
+.wow:hover .eyeR::after,
+.wow:hover .eyeL::after {
+  animation: eyebrow 3s linear infinite;
+}
+.wow:hover .mouth {
+  animation: moveMouth 4s linear infinite;
+}
+
+/*  ############  */
+/** sad **/
+.emoji .sad {
+  width: 100%;
+  height: 100%;
+  background: #fbc531;
+  border-radius: 50%;
+  position: relative;
+}
+.sad .eyes {
+  position: absolute;
+  width: 70%;
+  height: 20px;
+  top: 30px;
+  left: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+@keyframes handleMoveEyes {
+  0% {
+    top: 30px;
+  }
+  30% {
+    top: 20px;
+  }
+  60% {
+    top: 30px;
+  }
+}
+
+.sad .eyes .eyeL,
+.sad .eyes .eyeR {
+  width: 10px;
+  height: 10px;
+  background: #18191d;
+  border-radius: 50%;
+  position: relative;
+}
+
+@keyframes blinkingsad {
+  0% {
+    height: 10px;
+  }
+  5% {
+    height: 2px;
+  }
+  10% {
+    height: 10px;
+  }
+  60% {
+    height: 10px;
+  }
+  65% {
+    height: 2px;
+  }
+  70% {
+    height: 10px;
+  }
+}
+.sad .eyes i {
+  color: #3498db;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  transform: scale(0);
+}
+@keyframes cry {
+  0% {
+    opacity: 1;
+    top: 0;
+    transform: scale(0);
+  }
+  40% {
+    top: 20px;
+    transform: scale(1);
+    opacity: 1;
+  }
+  50%,
+  100% {
+    top: 20px;
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.sad .eyes .eyeL::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  top: -8px;
+  left: -1px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top: 2px solid #18191d;
+  transform: rotate(-20deg);
+}
+.sad .eyes .eyeR::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  top: -8px;
+  right: -1px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top: 2px solid #18191d;
+  transform: rotate(20deg);
+}
+.sad .mouth {
+  position: absolute;
+  width: 20px;
+  height: 16px;
+  border-top-left-radius: 60%;
+  border-top-right-radius: 60%;
+  border-top: 2px solid #18191d;
+  bottom: 8px;
+  left: 25px;
+}
+
+@keyframes handleMoveMouth {
+  0% {
+    bottom: 8px;
+  }
+  30% {
+    bottom: 20px;
+  }
+  60% {
+    bottom: 8px;
+  }
+}
+
+.sad:hover .eyes {
+  animation: handleMoveEyes 3s linear infinite;
+}
+.sad:hover .eyes .eyeL,
+.sad:hover .eyes .eyeR {
+  animation: blinkingsad 3s linear infinite;
+}
+.sad:hover .eyes i {
+  animation: cry 3s linear infinite;
+}
+.sad:hover .eyes .eyeR i {
+  animation-delay: 3.1s;
+}
+.sad:hover .eyes .eyeL i {
+  animation-delay: 0.87s;
+}
+.sad:hover .mouth {
+  animation: handleMoveMouth 3s linear infinite;
+}
+
+/*  ############  */
+/** angry **/
+.emoji .angry {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: linear-gradient(to top, #fbc531, rgb(245, 31, 31));
+  background-size: 200%;
+  -webkit-background-size: 200%;
+  -moz-background-size: 200%;
+  background-position: bottom;
+}
+
+@keyframes boiling {
+  0%,
+  100% {
+    background-position: bottom;
+  }
+  5% {
+    background-position: bottom;
+  }
+  20% {
+    background-position: top;
+  }
+  45% {
+    background-position: top;
+  }
+  60% {
+    background-position: bottom;
+  }
+}
+.angry .eyes {
+  position: absolute;
+  width: 70%;
+  height: 20px;
+  top: 40px;
+  left: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+@keyframes swingeyes {
+  0%,
+  100% {
+    left: 10px;
+    top: 40px;
+  }
+  5% {
+    left: 5px;
+  }
+  10% {
+    left: 15px;
+  }
+  15% {
+    left: 5px;
+  }
+  20% {
+    left: 15px;
+  }
+  25% {
+    left: 10px;
+    top: 40px;
+  }
+  60% {
+    top: 40px;
+  }
+  70% {
+    top: 30px;
+  }
+  90% {
+    top: 40px;
+  }
+}
+
+.angry .eyes .eyeL,
+.angry .eyes .eyeR {
+  width: 10px;
+  height: 10px;
+  background: #18191d;
+  border-radius: 50%;
+  position: relative;
+}
+@keyframes eyestight {
+  0% {
+    height: 10px;
+  }
+  3% {
+    height: 6px;
+  }
+  6% {
+    height: 10px;
+  }
+  60% {
+    height: 10px;
+  }
+  63% {
+    height: 6px;
+  }
+  66% {
+    height: 10px;
+  }
+}
+
+.angry .eyes .eyeL::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  top: -2px;
+  left: -5px;
+  border-top: 2px solid #18191d;
+  transform: rotate(20deg);
+  border-top-right-radius: 0%;
+}
+.angry .eyes .eyeR::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  top: -2px;
+  right: -5px;
+  border-top: 2px solid #18191d;
+  transform: rotate(-20deg);
+  border-top-left-radius: 0%;
+}
+
+@keyframes eyebrowMoveR {
+  0%,
+  100% {
+    top: -2px;
+    right: -5px;
+    transform: rotate(-20deg);
+    border-top-left-radius: 0%;
+  }
+  60% {
+    top: -2px;
+    right: -5px;
+    transform: rotate(-20deg);
+    border-top-left-radius: 0%;
+  }
+  65% {
+    top: -8px;
+    right: -8px;
+    transform: rotate(-20deg);
+    border-top-left-radius: 0%;
+  }
+  70% {
+    top: -8px;
+    right: -4px;
+    transform: rotate(-10deg);
+    border-top-left-radius: 50%;
+  }
+  75% {
+    top: -8px;
+    right: -4px;
+    transform: rotate(-20deg);
+    border-top-left-radius: 50%;
+  }
+  85% {
+    top: -2px;
+    right: -5px;
+    border-top-left-radius: 0%;
+  }
+}
+@keyframes eyebrowMoveL {
+  0%,
+  100% {
+    top: -2px;
+    left: -5px;
+    transform: rotate(20deg);
+    border-top-right-radius: 0%;
+  }
+  60% {
+    top: -2px;
+    left: -5px;
+    transform: rotate(20deg);
+    border-top-right-radius: 0%;
+  }
+  65% {
+    top: -8px;
+    left: -8px;
+    transform: rotate(20deg);
+    border-top-right-radius: 0%;
+  }
+  70% {
+    top: -8px;
+    left: -4px;
+    transform: rotate(10deg);
+    border-top-right-radius: 50%;
+  }
+  75% {
+    top: -8px;
+    left: -4px;
+    transform: rotate(20deg);
+    border-top-right-radius: 50%;
+  }
+  85% {
+    top: -2px;
+    left: -5px;
+    border-top-right-radius: 0%;
+  }
+}
+.angry .mouth {
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background: #18191d;
+  bottom: 12px;
+  left: 25px;
+}
+@keyframes closemouth {
+  0% {
+    left: 25px;
+    width: 20px;
+  }
+  5% {
+    left: 20px;
+  }
+  10% {
+    left: 35px;
+    width: 10px;
+  }
+  15% {
+    left: 20px;
+    width: 20px;
+  }
+  20% {
+    left: 30px;
+  }
+  25% {
+    left: 25px;
+    height: 5px;
+  }
+  60% {
+    height: 5px;
+  }
+  65% {
+    height: 10px;
+  }
+  80% {
+    height: 10px;
+  }
+  85% {
+    height: 5px;
+  }
+}
+
+.angry:hover {
+  animation: boiling 6s linear infinite;
+}
+.angry:hover .eyes {
+  animation: swingeyes 6s linear infinite;
+}
+.angry:hover .eyes .eyeR,
+.angry:hover .eyes .eyeL {
+  animation: eyestight 6s linear infinite;
+}
+.angry:hover .eyeL::after {
+  animation: eyebrowMoveL 6s linear infinite;
+}
+.angry:hover .eyeR::after {
+  animation: eyebrowMoveR 6s linear infinite;
+}
+.angry:hover .mouth {
+  animation: closemouth 6s linear infinite;
+}
