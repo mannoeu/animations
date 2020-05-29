@@ -20,6 +20,7 @@ body {
   align-items: center;
   font-family: Roboto, sans-serif;
   color: #fff;
+  cursor: none;
 }
 ul {
   list-style: none;
@@ -38,9 +39,7 @@ h3,
 h4 {
   font-family: "Playfair Display", serif;
 }
-
 /**/
-
 .container {
   width: 100%;
   padding: 0 100px;
@@ -100,7 +99,17 @@ h4 {
 .container ul li a:hover {
   transform: scale(1.1);
 }
-
+/**/
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%) scale(8);
+}
+/**/
 @media (max-width: 991px) {
   .container {
     padding: 0 15px;
