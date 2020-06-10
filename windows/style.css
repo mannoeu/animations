@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  color: #fff;
+  margin-top: 40px;
+  font-size: 1.2em;
+  letter-spacing: 0.06em;
+  animation: textBrightness 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  --color: #ffffff66;
+}
+.dots {
+  animation: dotLoading 2s linear infinite;
+  animation-delay: var(--i);
+  opacity: 0;
+}
+
+@keyframes dotLoading {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes textBrightness {
+  0%,
+  10%,
+  100% {
+    text-shadow: 0 0 4px var(--color);
+  }
+
+  60% {
+    text-shadow: 0 0 12px var(--color);
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  perspective: 300px;
+}
+.container .square {
+  width: 200px;
+  height: 200px;
+  transform: translateZ(20px) rotateY(25deg);
+  display: flex;
+  flex-wrap: wrap;
+}
+.square div {
+  width: 48%;
+  height: 48%;
+  margin: 2px;
+  animation: brightness 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.square div:nth-child(1) {
+  background: #f8682c;
+  --color: #f8682ccc;
+}
+.square div:nth-child(2) {
+  background: #91c300;
+  --color: #91c300cc;
+}
+.square div:nth-child(3) {
+  background: #00b4f1;
+  --color: #00b4f1ee;
+}
+.square div:nth-child(4) {
+  background: #ffc300;
+  --color: #ffc300ee;
+}
+
+@keyframes brightness {
+  0%,
+  10%,
+  100% {
+    box-shadow: 0 0 4px var(--color);
+  }
+
+  60% {
+    box-shadow: 0 0 22px var(--color);
+  }
+}
